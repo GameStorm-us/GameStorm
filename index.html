@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GameStorm - Play & Download Games</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>Game</span>Storm
+        </div>
+
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="#">Games</a>
+            <a href="#">Categories</a>
+            <a href="#">Downloads</a>
+            <a href="#">Leaderboard</a>
+        </nav>
+
+        <div class="nav-icons">
+            <button id="searchBtn">⌕</button>
+            <button>♙</button>
+        </div>
+
+    </header>
+
+
+    <!-- ================= SEARCH ================= -->
+
+    <div class="search-box" id="searchBox">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search games..."
+        >
+
+        <button id="closeSearch">✕</button>
+
+    </div>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-background"></div>
+
+            <div class="hero-content">
+
+                <span class="hero-category">
+                    ACTION • ADVENTURE
+                </span>
+
+                <h1 id="heroTitle">
+                    Shadow Warrior
+                </h1>
+
+                <p id="heroDescription">
+                    Enter a legendary world filled with powerful enemies,
+                    epic battles and unforgettable adventures.
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <button class="play-btn" id="playBtn">
+                        ▶ PLAY ONLINE
+                    </button>
+
+                    <button class="download-btn" id="downloadBtn">
+                        ↓ DOWNLOAD
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- HERO ARROWS -->
+
+            <button class="slider-arrow left" id="prevBtn">
+                ‹
+            </button>
+
+            <button class="slider-arrow right" id="nextBtn">
+                ›
+            </button>
+
+
+            <!-- SLIDER DOTS -->
+
+            <div class="slider-dots">
+
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TRENDING ================= -->
+
+        <section class="games-section">
+
+            <div class="section-header">
+
+                <div>
+                    <span class="section-line"></span>
+                    <h2>Trending Games</h2>
+                </div>
+
+                <a href="#">VIEW ALL →</a>
+
+            </div>
+
+
+            <div class="game-grid">
+
+                <!-- GAME 1 -->
+
+                <article class="game-card">
+
+                    <div class="game-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80"
+                            alt="Game"
+                        >
+
+                        <span class="game-badge">
+                            NEW
+                        </span>
+
+                    </div>
+
+                    <div class="game-info">
+
+                        <h3>Cyber Battle</h3>
+
+                        <p>Action • Adventure</p>
+
+                        <div class="game-actions">
+
+                            <button>
+                                ▶ Play
+                            </button>
+
+                            <button>
+                                ↓ Download
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- GAME 2 -->
+
+                <article class="game-card">
+
+                    <div class="game-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80"
+                            alt="Game"
+                        >
+
+                        <span class="game-badge">
+                            HOT
+                        </span>
+
+                    </div>
+
+                    <div class="game-info">
+
+                        <h3>Battle Arena</h3>
+
+                        <p>Fighting • Online</p>
+
+                        <div class="game-actions">
+
+                            <button>
+                                ▶ Play
+                            </button>
+
+                            <button>
+                                ↓ Download
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- GAME 3 -->
+
+                <article class="game-card">
+
+                    <div class="game-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80"
+                            alt="Game"
+                        >
+
+                        <span class="game-badge">
+                            18+
+                        </span>
+
+                    </div>
+
+                    <div class="game-info">
+
+                        <h3>Pixel Warriors</h3>
+
+                        <p>Arcade • RPG</p>
+
+                        <div class="game-actions">
+
+                            <button>
+                                ▶ Play
+                            </button>
+
+                            <button>
+                                ↓ Download
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- GAME 4 -->
+
+                <article class="game-card">
+
+                    <div class="game-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=600&q=80"
+                            alt="Game"
+                        >
+
+                        <span class="game-badge">
+                            TOP
+                        </span>
+
+                    </div>
+
+                    <div class="game-info">
+
+                        <h3>Speed Legends</h3>
+
+                        <p>Racing • Sports</p>
+
+                        <div class="game-actions">
+
+                            <button>
+                                ▶ Play
+                            </button>
+
+                            <button>
+                                ↓ Download
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="logo">
+            <span>Game</span>Storm
+        </div>
+
+        <p>
+            © 2026 GameStorm. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
