@@ -4,39 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>GameStorm - Play & Download Games</title>
+    <title>GameStorm - Gaming Zone</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
-
+    <!-- NAVBAR -->
     <header class="navbar">
 
-        <div class="logo">
+        <a href="#home" class="logo">
             <span>Game</span>Storm
-        </div>
+        </a>
 
-        <nav>
-            <a href="#" class="active">Home</a>
-            <a href="#">Games</a>
-            <a href="#">Categories</a>
-            <a href="#">Downloads</a>
-            <a href="#">Leaderboard</a>
+        <nav class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#games">Games</a>
+            <a href="#categories">Categories</a>
+            <a href="#downloads">Downloads</a>
+            <a href="#leaderboard">Leaderboard</a>
         </nav>
 
-        <div class="nav-icons">
-            <button id="searchBtn">⌕</button>
-            <button>♙</button>
+        <div class="nav-actions">
+            <button class="icon-btn" id="searchBtn">🔍</button>
+            <button class="login-btn" id="loginBtn">Login</button>
         </div>
 
     </header>
 
 
-    <!-- ================= SEARCH ================= -->
-
+    <!-- SEARCH -->
     <div class="search-box" id="searchBox">
 
         <input
@@ -50,34 +48,40 @@
     </div>
 
 
-    <!-- ================= HERO ================= -->
+    <!-- TOP AD -->
+    <div class="ad-container">
+        <span>ADVERTISEMENT</span>
+    </div>
 
-    <main>
+
+    <!-- HERO -->
+    <main id="home">
 
         <section class="hero">
 
             <div class="hero-background"></div>
 
+            <div class="hero-overlay"></div>
+
             <div class="hero-content">
 
-                <span class="hero-category">
-                    ACTION • ADVENTURE
+                <span class="hero-category" id="heroCategory">
+                    SANDBOX • ADVENTURE
                 </span>
 
                 <h1 id="heroTitle">
-                    Shadow Warrior
+                    Minecraft
                 </h1>
 
                 <p id="heroDescription">
-                    Enter a legendary world filled with powerful enemies,
-                    epic battles and unforgettable adventures.
+                    Explore, build, survive and create your
+                    own incredible world.
                 </p>
-
 
                 <div class="hero-buttons">
 
                     <button class="play-btn" id="playBtn">
-                        ▶ PLAY ONLINE
+                        ▶ PLAY
                     </button>
 
                     <button class="download-btn" id="downloadBtn">
@@ -88,9 +92,6 @@
 
             </div>
 
-
-            <!-- HERO ARROWS -->
-
             <button class="slider-arrow left" id="prevBtn">
                 ‹
             </button>
@@ -99,68 +100,62 @@
                 ›
             </button>
 
-
-            <!-- SLIDER DOTS -->
-
             <div class="slider-dots">
-
                 <span class="dot active"></span>
                 <span class="dot"></span>
-                <span class="dot"></span>
-
             </div>
 
         </section>
 
 
-        <!-- ================= TRENDING ================= -->
-
-        <section class="games-section">
+        <!-- GAMES -->
+        <section class="games-section" id="games">
 
             <div class="section-header">
 
                 <div>
                     <span class="section-line"></span>
-                    <h2>Trending Games</h2>
+                    <h2>Popular Games</h2>
                 </div>
 
-                <a href="#">VIEW ALL →</a>
+                <a href="#games">VIEW ALL →</a>
 
             </div>
 
 
             <div class="game-grid">
 
-                <!-- GAME 1 -->
+
+                <!-- MINECRAFT -->
 
                 <article class="game-card">
 
                     <div class="game-image">
 
                         <img
-                            src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80"
-                            alt="Game"
+                            src="https://images.unsplash.com/photo-1607513746994-51f730a44832?auto=format&fit=crop&w=800&q=85"
+                            alt="Minecraft"
                         >
 
                         <span class="game-badge">
-                            NEW
+                            POPULAR
                         </span>
 
                     </div>
 
                     <div class="game-info">
 
-                        <h3>Cyber Battle</h3>
+                        <h3>Minecraft</h3>
 
-                        <p>Action • Adventure</p>
+                        <p>Sandbox • Adventure</p>
 
                         <div class="game-actions">
 
-                            <button>
+                            <button onclick="playMinecraft()">
                                 ▶ Play
                             </button>
 
-                            <button>
+                            <button onclick="downloadMinecraft()">
                                 ↓ Download
                             </button>
 
@@ -171,15 +166,55 @@
                 </article>
 
 
-                <!-- GAME 2 -->
+                <!-- GTA SAN ANDREAS -->
 
                 <article class="game-card">
 
                     <div class="game-image">
 
                         <img
-                            src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80"
-                            alt="Game"
+                            src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=85"
+                            alt="GTA San Andreas"
+                        >
+
+                        <span class="game-badge">
+                            CLASSIC
+                        </span>
+
+                    </div>
+
+                    <div class="game-info">
+
+                        <h3>GTA San Andreas</h3>
+
+                        <p>Action • Open World</p>
+
+                        <div class="game-actions">
+
+                            <button onclick="playGTA()">
+                                ▶ Play
+                            </button>
+
+                            <button onclick="downloadGTA()">
+                                ↓ Download
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CYBER BATTLE -->
+
+                <article class="game-card">
+
+                    <div class="game-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=85"
+                            alt="Cyber Battle"
                         >
 
                         <span class="game-badge">
@@ -190,17 +225,17 @@
 
                     <div class="game-info">
 
-                        <h3>Battle Arena</h3>
+                        <h3>Cyber Battle</h3>
 
-                        <p>Fighting • Online</p>
+                        <p>Action • Sci-Fi</p>
 
                         <div class="game-actions">
 
-                            <button>
+                            <button onclick="showDemo('Cyber Battle')">
                                 ▶ Play
                             </button>
 
-                            <button>
+                            <button onclick="showDownload('Cyber Battle')">
                                 ↓ Download
                             </button>
 
@@ -211,59 +246,19 @@
                 </article>
 
 
-                <!-- GAME 3 -->
+                <!-- SPEED LEGENDS -->
 
                 <article class="game-card">
 
                     <div class="game-image">
 
                         <img
-                            src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80"
-                            alt="Game"
+                            src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=800&q=85"
+                            alt="Speed Legends"
                         >
 
                         <span class="game-badge">
-                            18+
-                        </span>
-
-                    </div>
-
-                    <div class="game-info">
-
-                        <h3>Pixel Warriors</h3>
-
-                        <p>Arcade • RPG</p>
-
-                        <div class="game-actions">
-
-                            <button>
-                                ▶ Play
-                            </button>
-
-                            <button>
-                                ↓ Download
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- GAME 4 -->
-
-                <article class="game-card">
-
-                    <div class="game-image">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=600&q=80"
-                            alt="Game"
-                        >
-
-                        <span class="game-badge">
-                            TOP
+                            NEW
                         </span>
 
                     </div>
@@ -276,11 +271,11 @@
 
                         <div class="game-actions">
 
-                            <button>
+                            <button onclick="showDemo('Speed Legends')">
                                 ▶ Play
                             </button>
 
-                            <button>
+                            <button onclick="showDownload('Speed Legends')">
                                 ↓ Download
                             </button>
 
@@ -294,20 +289,192 @@
 
         </section>
 
+
+        <!-- AD -->
+        <div class="ad-container large-ad">
+            <span>ADVERTISEMENT</span>
+        </div>
+
+
+        <!-- CATEGORIES -->
+        <section class="simple-section" id="categories">
+
+            <div class="section-title">
+
+                <span class="section-line"></span>
+
+                <h2>Game Categories</h2>
+
+            </div>
+
+            <div class="category-grid">
+
+                <button>⚔️ Action</button>
+                <button>🏎️ Racing</button>
+                <button>🗺️ Adventure</button>
+                <button>⚽ Sports</button>
+                <button>👾 Arcade</button>
+                <button>🧙 RPG</button>
+
+            </div>
+
+        </section>
+
+
+        <!-- DOWNLOADS -->
+        <section class="simple-section" id="downloads">
+
+            <div class="section-title">
+
+                <span class="section-line"></span>
+
+                <h2>Downloads</h2>
+
+            </div>
+
+            <p class="section-description">
+                Download options for supported games are
+                connected to their official pages.
+            </p>
+
+        </section>
+
+
+        <!-- LEADERBOARD -->
+        <section class="simple-section" id="leaderboard">
+
+            <div class="section-title">
+
+                <span class="section-line"></span>
+
+                <h2>Leaderboard</h2>
+
+            </div>
+
+            <div class="leaderboard">
+
+                <div>
+                    <span>🥇 Player One</span>
+                    <strong>12,450</strong>
+                </div>
+
+                <div>
+                    <span>🥈 Player Two</span>
+                    <strong>10,820</strong>
+                </div>
+
+                <div>
+                    <span>🥉 Player Three</span>
+                    <strong>9,640</strong>
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
 
 
-    <!-- ================= FOOTER ================= -->
+    <!-- BOTTOM AD -->
+    <div class="ad-container">
+        <span>ADVERTISEMENT</span>
+    </div>
 
+
+    <!-- LOGIN -->
+    <div class="modal" id="loginModal">
+
+        <div class="modal-box">
+
+            <button class="modal-close" id="closeLogin">
+                ✕
+            </button>
+
+            <h2>Welcome Back</h2>
+
+            <p>Login to your GameStorm account.</p>
+
+            <input
+                type="email"
+                id="loginEmail"
+                placeholder="Email"
+            >
+
+            <input
+                type="password"
+                id="loginPassword"
+                placeholder="Password"
+            >
+
+            <button class="modal-main-btn" id="loginSubmit">
+                Login
+            </button>
+
+            <p class="modal-switch">
+                Don't have an account?
+                <button id="signupLink">Sign Up</button>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- SIGNUP -->
+    <div class="modal" id="signupModal">
+
+        <div class="modal-box">
+
+            <button class="modal-close" id="closeSignup">
+                ✕
+            </button>
+
+            <h2>Create Account</h2>
+
+            <p>Join the GameStorm community.</p>
+
+            <input
+                type="text"
+                id="signupName"
+                placeholder="Username"
+            >
+
+            <input
+                type="email"
+                id="signupEmail"
+                placeholder="Email"
+            >
+
+            <input
+                type="password"
+                id="signupPassword"
+                placeholder="Password"
+            >
+
+            <button class="modal-main-btn" id="signupSubmit">
+                Create Account
+            </button>
+
+            <p class="modal-switch">
+                Already have an account?
+                <button id="loginLink">Login</button>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
     <footer>
 
         <div class="logo">
             <span>Game</span>Storm
         </div>
 
-        <p>
-            © 2026 GameStorm. All Rights Reserved.
-        </p>
+        <p>🎮 Your Ultimate Gaming Zone</p>
+
+        <p>© 2026 GameStorm</p>
 
     </footer>
 
